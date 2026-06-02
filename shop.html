@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop – Thebes Mart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🛒 Thebes Mart</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Our <span>Shop</span></h1>
+    <p>Thousands of products across every category — all at great prices.</p>
+  </div>
+
+  <!-- TOILETRIES -->
+  <section class="shop-section" id="toiletries">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="shop-cat-header">
+        <div class="icon">🧴</div>
+        <h2>Toiletries &amp; Personal Care</h2>
+      </div>
+      <div class="shop-grid">
+        <div class="product-card"><div class="product-img" style="background:#fde8c8">🧼</div><div class="product-info"><span class="tag">Toiletries</span><h4>Body Soap Pack (x6)</h4><p>Assorted scents</p><span class="price">₦1,200</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#ffe5f0">🧴</div><div class="product-info"><span class="tag">Toiletries</span><h4>Body Lotion 500ml</h4><p>Moisturising &amp; soft skin</p><span class="price">₦2,100</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#e0f7fa">🪥</div><div class="product-info"><span class="tag">Toiletries</span><h4>Toothbrush Set (x4)</h4><p>Soft bristles</p><span class="price">₦800</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#f3e5f5">🧹</div><div class="product-info"><span class="tag">Toiletries</span><h4>Shampoo 400ml</h4><p>Anti-dandruff formula</p><span class="price">₦1,600</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#fff9c4">🪒</div><div class="product-info"><span class="tag">Toiletries</span><h4>Disposable Razors (x5)</h4><p>For smooth shaving</p><span class="price">₦600</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOOL BAGS -->
+  <section class="shop-section" id="schoolbags">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="shop-cat-header">
+        <div class="icon">🎒</div>
+        <h2>School Bags &amp; Stationery</h2>
+      </div>
+      <div class="shop-grid">
+        <div class="product-card"><div class="product-img" style="background:#d4f1c8">🎒</div><div class="product-info"><span class="tag">School</span><h4>Kids Waterproof Backpack</h4><p>Padded, durable</p><span class="price">₦4,500</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#cce5ff">📚</div><div class="product-info"><span class="tag">School</span><h4>Stationery Set</h4><p>Pens, rulers, erasers</p><span class="price">₦950</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#ffe5b4">🍱</div><div class="product-info"><span class="tag">School</span><h4>Kids Lunch Bag</h4><p>Insulated, easy-clean</p><span class="price">₦1,800</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#f0e6ff">✏️</div><div class="product-info"><span class="tag">School</span><h4>Pencil Case (Zippered)</h4><p>Large capacity</p><span class="price">₦700</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#d4f1c8">📓</div><div class="product-info"><span class="tag">School</span><h4>Exercise Books (x12)</h4><p>A4 lined &amp; squared</p><span class="price">₦1,100</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROCERIES -->
+  <section class="shop-section" id="groceries">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="shop-cat-header">
+        <div class="icon">🍚</div>
+        <h2>Groceries &amp; Food Items</h2>
+      </div>
+      <div class="shop-grid">
+        <div class="product-card"><div class="product-img" style="background:#ffecd2">🍚</div><div class="product-info"><span class="tag">Groceries</span><h4>Golden Rice 10kg</h4><p>Premium parboiled</p><span class="price">₦8,000</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#fffde7">🫙</div><div class="product-info"><span class="tag">Groceries</span><h4>Palm Oil 5L</h4><p>Pure &amp; refined</p><span class="price">₦5,500</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#f5f5dc">🥫</div><div class="product-info"><span class="tag">Groceries</span><h4>Tomato Paste (x6 tins)</h4><p>Thick &amp; flavourful</p><span class="price">₦1,400</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#ffecd2">🧂</div><div class="product-info"><span class="tag">Groceries</span><h4>Table Salt 1kg</h4><p>Iodized, fine grain</p><span class="price">₦350</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#e8f5e9">🫘</div><div class="product-info"><span class="tag">Groceries</span><h4>Dried Beans 5kg</h4><p>Iron-rich &amp; fresh</p><span class="price">₦4,200</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELECTRONICS -->
+  <section class="shop-section" id="electronics">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="shop-cat-header">
+        <div class="icon">🔌</div>
+        <h2>Electronics &amp; Accessories</h2>
+      </div>
+      <div class="shop-grid">
+        <div class="product-card"><div class="product-img" style="background:#dce8ff">💡</div><div class="product-info"><span class="tag">Electronics</span><h4>LED Bulb 12W (x3)</h4><p>Energy saving</p><span class="price">₦1,800</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#e8f4fd">🔋</div><div class="product-info"><span class="tag">Electronics</span><h4>AA Batteries (x8)</h4><p>Long-lasting power</p><span class="price">₦1,200</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#fff0e0">🔌</div><div class="product-info"><span class="tag">Electronics</span><h4>USB Charging Cable</h4><p>Type-C &amp; Lightning</p><span class="price">₦1,500</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#e0f7fa">📻</div><div class="product-info"><span class="tag">Electronics</span><h4>Pocket Radio FM/AM</h4><p>Battery powered</p><span class="price">₦3,200</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#f3e5f5">🔦</div><div class="product-info"><span class="tag">Electronics</span><h4>LED Torch / Flashlight</h4><p>Super bright, rechargeable</p><span class="price">₦2,000</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME & KITCHEN -->
+  <section class="shop-section" id="home">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div class="shop-cat-header">
+        <div class="icon">🏠</div>
+        <h2>Home &amp; Kitchen</h2>
+      </div>
+      <div class="shop-grid">
+        <div class="product-card"><div class="product-img" style="background:#fce4ec">🧹</div><div class="product-info"><span class="tag">Home</span><h4>Broom &amp; Dustpan Set</h4><p>Long-handle, soft bristle</p><span class="price">₦1,600</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#e8f5e9">🫙</div><div class="product-info"><span class="tag">Home</span><h4>Storage Containers (x5)</h4><p>Airtight lids</p><span class="price">₦2,500</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#fff8e1">🪣</div><div class="product-info"><span class="tag">Home</span><h4>Plastic Bucket 20L</h4><p>Heavy duty</p><span class="price">₦900</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#e3f2fd">🍽️</div><div class="product-info"><span class="tag">Home</span><h4>Dinner Plate Set (x6)</h4><p>Ceramic, white &amp; blue</p><span class="price">₦3,800</span></div></div>
+        <div class="product-card"><div class="product-img" style="background:#fce4ec">🧽</div><div class="product-info"><span class="tag">Home</span><h4>Sponge &amp; Scrubber Pack</h4><p>x6 assorted</p><span class="price">₦500</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><h3>🛒 Thebes Mart</h3><p>Your one-stop neighbourhood store for everything you need.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>📍 Thebes Market, Neuschausen</p><p>📞 +234 800 000 0000</p><p>✉️ hello@thebesmart.com</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Thebes Mart. All rights reserved.</p></div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

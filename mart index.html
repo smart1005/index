@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thebes Mart – Everything You Need</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="logo">🛒 Thebes Mart</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">Your Neighbourhood Superstore</span>
+      <h1>Welcome to<br/><span>Thebes Mart</span></h1>
+      <p>Toiletries, school bags, groceries, electronics &amp; more — all under one roof.</p>
+      <div class="hero-btns">
+        <a href="shop.html" class="btn-primary">Shop Now</a>
+        <a href="gallery.html" class="btn-outline">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="section-header">
+      <h2>Browse Categories</h2>
+      <p>Everything a market can offer — and more</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" style="--bg:#f9c74f">
+        <div class="cat-icon">🧴</div>
+        <h3>Toiletries</h3>
+        <p>Soaps, creams, shampoos &amp; hygiene essentials</p>
+        <a href="shop.html#toiletries">Explore →</a>
+      </div>
+      <div class="cat-card" style="--bg:#90be6d">
+        <div class="cat-icon">🎒</div>
+        <h3>School Bags</h3>
+        <p>Backpacks, lunch bags &amp; stationery sets</p>
+        <a href="shop.html#schoolbags">Explore →</a>
+      </div>
+      <div class="cat-card" style="--bg:#43aa8b">
+        <div class="cat-icon">🍚</div>
+        <h3>Groceries</h3>
+        <p>Rice, oil, grains, canned goods &amp; household staples</p>
+        <a href="shop.html#groceries">Explore →</a>
+      </div>
+      <div class="cat-card" style="--bg:#f3722c">
+        <div class="cat-icon">🔌</div>
+        <h3>Electronics</h3>
+        <p>Cables, bulbs, phones accessories &amp; gadgets</p>
+        <a href="shop.html#electronics">Explore →</a>
+      </div>
+      <div class="cat-card" style="--bg:#577590">
+        <div class="cat-icon">👗</div>
+        <h3>Clothing</h3>
+        <p>Casual wear, uniforms, socks &amp; underwear</p>
+        <a href="shop.html#clothing">Explore →</a>
+      </div>
+      <div class="cat-card" style="--bg:#e63946">
+        <div class="cat-icon">🏠</div>
+        <h3>Home &amp; Kitchen</h3>
+        <p>Pots, plates, mops, cleaning supplies &amp; more</p>
+        <a href="shop.html#home">Explore →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER STRIP -->
+  <section class="banner-strip">
+    <div class="marquee-track">
+      <span>🛍️ FRESH STOCK WEEKLY</span>
+      <span>🚚 FAST LOCAL DELIVERY</span>
+      <span>💰 BEST PRICES GUARANTEED</span>
+      <span>🎁 BULK DISCOUNTS AVAILABLE</span>
+      <span>🛍️ FRESH STOCK WEEKLY</span>
+      <span>🚚 FAST LOCAL DELIVERY</span>
+      <span>💰 BEST PRICES GUARANTEED</span>
+      <span>🎁 BULK DISCOUNTS AVAILABLE</span>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="featured">
+    <div class="section-header">
+      <h2>Featured Products</h2>
+      <p>Top picks from our shelves this week</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img" style="background:#fde8c8">🧼</div>
+        <div class="product-info">
+          <span class="tag">Toiletries</span>
+          <h4>Premium Body Soap Pack</h4>
+          <p>Pack of 6 assorted scents</p>
+          <span class="price">₦1,200</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#d4f1c8">🎒</div>
+        <div class="product-info">
+          <span class="tag">School Bags</span>
+          <h4>Kids Waterproof Backpack</h4>
+          <p>Durable with padded straps</p>
+          <span class="price">₦4,500</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#ffecd2">🍚</div>
+        <div class="product-info">
+          <span class="tag">Groceries</span>
+          <h4>Golden Rice (10kg Bag)</h4>
+          <p>Premium long grain parboiled</p>
+          <span class="price">₦8,000</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img" style="background:#dce8ff">💡</div>
+        <div class="product-info">
+          <span class="tag">Electronics</span>
+          <h4>LED Bulb (12W, 3 Pack)</h4>
+          <p>Energy saving, cool white</p>
+          <span class="price">₦1,800</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="shop.html" class="btn-primary">See All Products</a>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <div class="section-header light">
+      <h2>Why Shop With Us?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">✅</div>
+        <h3>Quality Guaranteed</h3>
+        <p>Every item on our shelf meets our quality standard before it gets to you.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💸</div>
+        <h3>Affordable Prices</h3>
+        <p>We cut out the middleman so you always get fair market prices.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📦</div>
+        <h3>Wide Variety</h3>
+        <p>From toiletries to electronics — thousands of products in one place.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3>Trusted by Community</h3>
+        <p>Serving hundreds of families and businesses in the neighborhood.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>🛒 Thebes Mart</h3>
+        <p>Your one-stop neighbourhood store for everything you need.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Thebes Market, Neuschausen</p>
+        <p>📞 +234 800 000 0000</p>
+        <p>✉️ hello@thebesmart.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Thebes Mart. All rights reserved. | Designed as a portfolio project.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

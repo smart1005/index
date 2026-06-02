@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – Thebes Mart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .team-section { padding: 5rem 2rem; background: var(--white); }
+    .team-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+    }
+    .team-card {
+      background: var(--light); border-radius: 14px;
+      padding: 2rem; text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+    }
+    .team-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+    .team-avatar {
+      width: 90px; height: 90px; border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+    }
+    .team-card h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--dark); margin-bottom: 0.2rem; }
+    .team-card p { color: #777; font-size: 0.85rem; }
+    .mission-section {
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, var(--secondary) 0%, #f9c74f 100%);
+    }
+    .mission-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+    .mission-inner h2 { font-family: var(--font-display); font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem; }
+    .mission-inner p { font-size: 1.1rem; color: rgba(0,0,0,0.7); line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🛒 Thebes Mart</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>About <span>Thebes Mart</span></h1>
+    <p>Rooted in community. Built to serve everyone.</p>
+  </div>
+
+  <!-- STORY -->
+  <section class="about-section" style="background: var(--white);">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>Our Story</h2>
+        <p>Thebes Mart started with a simple dream: to bring everything a household, school, or small business could ever need into one friendly, affordable store right in the heart of the community.</p>
+        <p>From humble beginnings as a small corner shop, we've grown into a full-fledged superstore stocking thousands of products — from your morning toiletries to school bags for the kids, from rice and cooking oil to light bulbs and phone cables.</p>
+        <p>We believe that convenience shouldn't come at a premium. Every price on our shelf reflects our commitment to making quality goods accessible to everyone.</p>
+        <a href="contact.html" class="btn-primary" style="margin-top:1rem; display:inline-block;">Get in Touch</a>
+      </div>
+      <div class="about-image">🏪</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item"><h3>5,000+</h3><p>Products in stock</p></div>
+      <div class="stat-item"><h3>3,200+</h3><p>Happy customers</p></div>
+      <div class="stat-item"><h3>12+</h3><p>Product categories</p></div>
+      <div class="stat-item"><h3>8 yrs</h3><p>Serving the community</p></div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="mission-section">
+    <div class="mission-inner">
+      <h2>Our Mission</h2>
+      <p>To be the most trusted, most affordable, and most complete neighbourhood store — where every customer leaves with exactly what they came for, and a smile on their face. We're not just a store. We're part of the family.</p>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <div class="section-header">
+      <h2>Meet the Team</h2>
+      <p>The people who keep the shelves stocked and the smiles coming</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar" style="background:#fde8c8">👨🏾‍💼</div>
+        <h4>Mr. Chukwu Emeka</h4>
+        <p>Founder &amp; Manager</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#d4f1c8">👩🏾‍💼</div>
+        <h4>Mrs. Adaeze Obi</h4>
+        <p>Head of Operations</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#dce8ff">👦🏾</div>
+        <h4>Tunde Afolabi</h4>
+        <p>Sales &amp; Inventory</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:#ffe5f0">👩🏽</div>
+        <h4>Ngozi Amadi</h4>
+        <p>Customer Relations</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><h3>🛒 Thebes Mart</h3><p>Your one-stop neighbourhood store for everything you need.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>📍 Thebes Market, Neuschausen</p><p>📞 +234 800 000 0000</p><p>✉️ hello@thebesmart.com</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Thebes Mart. All rights reserved.</p></div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

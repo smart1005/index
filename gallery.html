@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – Thebes Mart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .gallery-filter {
+      display: flex; flex-wrap: wrap; gap: 0.7rem;
+      justify-content: center; margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.4rem; border-radius: 50px; border: 2px solid #ddd;
+      background: transparent; font-family: var(--font-body); font-weight: 600;
+      font-size: 0.9rem; cursor: pointer; transition: all 0.25s; color: var(--text);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary); border-color: var(--primary); color: var(--white);
+    }
+    .gallery-grid { 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem; max-width: 1200px; margin: 0 auto;
+    }
+    .gallery-item {
+      border-radius: 14px; overflow: hidden;
+      position: relative; cursor: pointer;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      height: 240px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+      transition: all 0.3s;
+    }
+    .gallery-item:nth-child(3n+1) { grid-row: span 1; }
+    .gallery-item:nth-child(5n+2) { grid-row: span 2; height: auto; min-height: 240px; }
+    .gallery-item .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,26,46,0.9) 0%, transparent 50%);
+      display: flex; flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      opacity: 0; transition: 0.3s;
+    }
+    .gallery-item:hover { transform: scale(1.02); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
+    .gallery-item:hover .overlay { opacity: 1; }
+    .gallery-item .overlay h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--white); }
+    .gallery-item .overlay p { font-size: 0.8rem; color: var(--secondary); margin-top: 0.2rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🛒 Thebes Mart</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Our <span>Gallery</span></h1>
+    <p>A visual tour of our products, store &amp; categories</p>
+  </div>
+
+  <section class="gallery-section" style="padding: 5rem 2rem;">
+    <div class="gallery-filter">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+      <button class="filter-btn" onclick="filterGallery('toiletries', this)">Toiletries</button>
+      <button class="filter-btn" onclick="filterGallery('school', this)">School</button>
+      <button class="filter-btn" onclick="filterGallery('groceries', this)">Groceries</button>
+      <button class="filter-btn" onclick="filterGallery('electronics', this)">Electronics</button>
+      <button class="filter-btn" onclick="filterGallery('home', this)">Home</button>
+      <button class="filter-btn" onclick="filterGallery('store', this)">Store</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-cat="store" style="background: linear-gradient(135deg,#1a1a2e,#e63946)">
+        🏪<div class="overlay"><h4>The Storefront</h4><p>Store</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="toiletries" style="background: linear-gradient(135deg,#fde8c8,#f9c74f)">
+        🧴<div class="overlay"><h4>Personal Care Shelf</h4><p>Toiletries</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="groceries" style="background: linear-gradient(135deg,#e8f5e9,#43aa8b)">
+        🍚<div class="overlay"><h4>Grocery Aisle</h4><p>Groceries</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="school" style="background: linear-gradient(135deg,#cce5ff,#577590)">
+        🎒<div class="overlay"><h4>School Bags Display</h4><p>School</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="electronics" style="background: linear-gradient(135deg,#dce8ff,#0077b6)">
+        🔌<div class="overlay"><h4>Electronics Corner</h4><p>Electronics</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="home" style="background: linear-gradient(135deg,#fce4ec,#e63946)">
+        🏠<div class="overlay"><h4>Home Essentials</h4><p>Home</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="store" style="background: linear-gradient(135deg,#f3e5f5,#9c27b0)">
+        🛒<div class="overlay"><h4>Customer Service Desk</h4><p>Store</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="toiletries" style="background: linear-gradient(135deg,#e0f7fa,#00bcd4)">
+        🧼<div class="overlay"><h4>Soaps &amp; Hygiene</h4><p>Toiletries</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="groceries" style="background: linear-gradient(135deg,#fff9c4,#f9c74f)">
+        🫙<div class="overlay"><h4>Cooking Oils &amp; Spices</h4><p>Groceries</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="school" style="background: linear-gradient(135deg,#e8f5e9,#4caf50)">
+        📚<div class="overlay"><h4>Stationery Corner</h4><p>School</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="home" style="background: linear-gradient(135deg,#fff3e0,#ff9800)">
+        🪣<div class="overlay"><h4>Cleaning Supplies</h4><p>Home</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="electronics" style="background: linear-gradient(135deg,#f3e5f5,#673ab7)">
+        💡<div class="overlay"><h4>Lighting Solutions</h4><p>Electronics</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="store" style="background: linear-gradient(135deg,#1a1a2e,#43aa8b)">
+        🏬<div class="overlay"><h4>Store Interior View</h4><p>Store</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="toiletries" style="background: linear-gradient(135deg,#ffe5f0,#e91e63)">
+        🪒<div class="overlay"><h4>Grooming Products</h4><p>Toiletries</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="groceries" style="background: linear-gradient(135deg,#e8f5e9,#388e3c)">
+        🫘<div class="overlay"><h4>Grains &amp; Legumes</h4><p>Groceries</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><h3>🛒 Thebes Mart</h3><p>Your one-stop neighbourhood store for everything you need.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-contact"><h4>Contact Us</h4><p>📍 Thebes Market, Neuschausen</p><p>📞 +234 800 000 0000</p><p>✉️ hello@thebesmart.com</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Thebes Mart. All rights reserved.</p></div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (cat === 'all' || item.dataset.cat === cat) {
+          item.style.display = 'flex';
+          item.style.animation = 'fadeUp 0.4s ease';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
